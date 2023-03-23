@@ -6,6 +6,9 @@
                 <input type="checkbox" name="" id="web" [(ngModel)]="checkboxWeb" (change)="currentTotalPrice()" /> 
                 Una página web: {{priceWeb}} €
             </div>
+            <div *ngIf="checkboxWeb" class="mb-2">
+                <app-panell (updatePrice)="currentTotalPrice()"></app-panell>
+            </div>
             <div class="mb-2">
                 <input type="checkbox" name="" id="seo" [(ngModel)]="checkboxSEO" (change)="currentTotalPrice()" /> 
                 Una consultoría SEO: {{priceSEO}} €
